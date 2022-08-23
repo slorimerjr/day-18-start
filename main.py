@@ -4,9 +4,13 @@ import random
 from random import randint
 
 
-t.colormode(255)
-tim = t.Turtle()
-tim.pensize(5)
+
+# my shape draw w/ random color solutions
+
+# t.colormode(255)
+# tim = t.Turtle()
+# tim.pensize(5)
+
 
 # 360 / num_angle = angle
 
@@ -29,7 +33,7 @@ tim.pensize(5)
 # tim = t.Turtle()
 #
 # num_sides = 5
-colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+# colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 #
 # def draw_shape(num_sides):
 #     angle = 360 / num_sides
@@ -41,25 +45,43 @@ colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaG
 #     tim.color(random.choice(colors))
 #     draw_shape(shape_sides)
 
-# random walk solution
-# forward(), back(), right(), left()
-# tim.speed('slowest')
-# tim.forward(100)
-# tim.left(90)
-# tim.forward(100)
-# tim.right(90)
-# tim.forward(100)
-# tim.left(45)
-# tim.back(100)
+# my random walk solution
 
+# colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+# directions = [0, 90, 180, 270]
+# tim.speed(10)
+# tim.pensize(10)
+#
+# for _ in range(100):
+#     tim.color(random.choice(colors))
+#     tim.left(random.choice(directions))
+#     tim.forward(25)
+#
+
+
+# teacher's random walk solution
+tim = t.Turtle()
+
+colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 directions = [0, 90, 180, 270]
-tim.speed(10)
 tim.pensize(15)
+tim.speed('fastest')
 
-for _ in range(100):
+for _ in range(200):
     tim.color(random.choice(colors))
-    tim.left(random.choice(directions))
-    tim.forward(25)
+    tim.forward(30)
+    tim.setheading(random.choice(directions))
+
+
+
+
+
+
+
+
+
+
+
 
 screen = Screen()
 screen.exitonclick()
